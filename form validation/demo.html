@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+   
+    .container {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #b6bcdd;
+        border-radius: 5px;
+        
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #aa53cf;
+        color: rgb(219, 192, 192);
+        padding: 10px 20px;
+        border-radius: 20px;
+       
+    }
+    input[type="submit"]:hover {
+        background-color: #213a42;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Registration form</h2>
+    <form action="" onsubmit="formvalidate()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" >
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" >
+        
+        <label for="usn">Roll No:</label>
+        <input type="text" id="roll" name="roll" >
+        
+        <label for="college">College:</label>
+        <input type="text" id="college" name="college" >
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" >
+        
+        <input type="submit" value="Register">
+    </form>
+</div>
+<script>
+  function formvalidate(){
+    const username=document.getElementById('username').value;
+    const email=document.getElementById('email').value;
+    const usn=document.getElementById('roll').value;
+    const college=document.getElementById('college').value;
+    const password=document.getElementById('password').value;
+    const isval=true
+    if(username.trim()===''){
+      alert("username should not be empty")
+      isval=false;
+    }
+    if(email.trim()===''){
+      alert("email should not be empty");
+      isval=false;
+    }
+    if( roll.trim()===''){
+      alert("Roll number should not be empty");
+      isval=false;
+    }
+    if(college.trim()===''){
+      alert("college should not be empty");
+      isval=false;
+    }
+    if(password.trim()===''){
+      alert("password should be contain minimum of length 6");
+      isval=false;
+    }
+  }
+
+
+</script>
+</body>
+</html>
